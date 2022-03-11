@@ -1,12 +1,12 @@
-log_file = open("um-server-01.txt")
+log_file = open("um-server-01.txt") # opens a file and assigns it to log_file
 
 
-def sales_reports(log_file):
-    for line in log_file:
-        line = line.rstrip()
-        day = line[0:3]
-        if day == "Tue":
-            print(line)
+def sales_reports(log_file): # creates a function called [sales_report] that takes [log_file] as an argument
+    for line in log_file: # loops over each line
+        line = line.rstrip() # removes any trailing characters (spaces by default)
+        day = line[0:3] # assigns first three characters of line to [day]
+        if day == "Mon": # checks if day is equal to "Tue"
+            print(line) # if day is equal to "Tue", prints the line
 
 
-sales_reports(log_file)
+sales_reports(log_file) # calls [sales_report] function passing in [log_file] as parameter
