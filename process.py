@@ -5,8 +5,11 @@ def sales_reports(log_file): # creates a function called [sales_report] that tak
     for line in log_file: # loops over each line
         line = line.rstrip() # removes any trailing characters (spaces by default)
         day = line[0:3] # assigns first three characters of line to [day]
-        if day == "Mon": # checks if day is equal to "Mon"
-            print(line) # if day is equal to "Mon", prints the line
+        # if day == "Mon": # checks if day is equal to "Mon"
+        #     print(line) # if day is equal to "Mon", prints the line
+        quantity = line[16:18]
+        if int(quantity) >= 10:
+            print(line)
 
 
 sales_reports(log_file) # calls [sales_report] function passing in [log_file] as parameter
